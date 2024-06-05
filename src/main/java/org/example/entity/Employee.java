@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Employee {
     private int id;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
 
     public Employee(int id, String firstName, String lastName) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstName;
+        this.lastname = lastName;
     }
 
     public int getId() {
@@ -18,33 +18,35 @@ public class Employee {
     }
 
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Employee employee)) return false;
-        return getId() == employee.getId() && Objects.equals(getFirstName(), employee.getFirstName()) && Objects.equals(getLastName(), employee.getLastName());
+        return getId() == employee.getId() && Objects.equals(getFirstname(), employee.getFirstname()) && Objects.equals(getLastname(), employee.getLastname());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName());
+        return Objects.hash(getId(), getFirstname(), getLastname());
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstname + '\'' +
+                ", lastName='" + lastname + '\'' +
                 '}';
     }
+
+
 }
